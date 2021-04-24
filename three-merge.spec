@@ -4,7 +4,7 @@
 #
 Name     : three-merge
 Version  : 0.1.1
-Release  : 5
+Release  : 6
 URL      : https://files.pythonhosted.org/packages/4d/d1/86f4a088f2ebdc3ff1a9cb653aab91e588a8d0930b41c2e066e6a2920ae7/three-merge-0.1.1.tar.gz
 Source0  : https://files.pythonhosted.org/packages/4d/d1/86f4a088f2ebdc3ff1a9cb653aab91e588a8d0930b41c2e066e6a2920ae7/three-merge-0.1.1.tar.gz
 Summary  : Simple library for merging two strings with respect to a base one
