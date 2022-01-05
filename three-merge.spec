@@ -4,7 +4,7 @@
 #
 Name     : three-merge
 Version  : 0.1.1
-Release  : 13
+Release  : 14
 URL      : https://files.pythonhosted.org/packages/4d/d1/86f4a088f2ebdc3ff1a9cb653aab91e588a8d0930b41c2e066e6a2920ae7/three-merge-0.1.1.tar.gz
 Source0  : https://files.pythonhosted.org/packages/4d/d1/86f4a088f2ebdc3ff1a9cb653aab91e588a8d0930b41c2e066e6a2920ae7/three-merge-0.1.1.tar.gz
 Summary  : Simple library for merging two strings with respect to a base one
@@ -13,9 +13,8 @@ License  : MIT
 Requires: three-merge-license = %{version}-%{release}
 Requires: three-merge-python = %{version}-%{release}
 Requires: three-merge-python3 = %{version}-%{release}
-Requires: diff-match-patch
 BuildRequires : buildreq-distutils3
-BuildRequires : diff-match-patch
+BuildRequires : pypi(diff_match_patch)
 
 %description
 # three-merge
@@ -66,15 +65,15 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1604943987
+export SOURCE_DATE_EPOCH=1641423609
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
 export NM=gcc-nm
-export CFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=4 "
-export FCFLAGS="$FFLAGS -O3 -ffat-lto-objects -flto=4 "
-export FFLAGS="$FFLAGS -O3 -ffat-lto-objects -flto=4 "
-export CXXFLAGS="$CXXFLAGS -O3 -ffat-lto-objects -flto=4 "
+export CFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=auto "
+export FCFLAGS="$FFLAGS -O3 -ffat-lto-objects -flto=auto "
+export FFLAGS="$FFLAGS -O3 -ffat-lto-objects -flto=auto "
+export CXXFLAGS="$CXXFLAGS -O3 -ffat-lto-objects -flto=auto "
 export MAKEFLAGS=%{?_smp_mflags}
 python3 setup.py build
 
