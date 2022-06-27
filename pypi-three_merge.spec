@@ -4,7 +4,7 @@
 #
 Name     : pypi-three_merge
 Version  : 0.1.1
-Release  : 16
+Release  : 17
 URL      : https://files.pythonhosted.org/packages/4d/d1/86f4a088f2ebdc3ff1a9cb653aab91e588a8d0930b41c2e066e6a2920ae7/three-merge-0.1.1.tar.gz
 Source0  : https://files.pythonhosted.org/packages/4d/d1/86f4a088f2ebdc3ff1a9cb653aab91e588a8d0930b41c2e066e6a2920ae7/three-merge-0.1.1.tar.gz
 Summary  : Simple library for merging two strings with respect to a base one
@@ -68,7 +68,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1653011132
+export SOURCE_DATE_EPOCH=1656368627
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -106,7 +106,7 @@ export FCFLAGS="$FCFLAGS -m64 -march=x86-64-v3 "
 export LDFLAGS="$LDFLAGS -m64 -march=x86-64-v3 "
 python3 -tt setup.py build install --root=%{buildroot}-v3
 popd
-/usr/bin/elf-move.py avx2 %{buildroot}-v3 %{buildroot}/usr/share/clear/optimized-elf/ %{buildroot}/usr/share/clear/filemap/filemap-%{name}
+/usr/bin/elf-move.py avx2 %{buildroot}-v3 %{buildroot} %{buildroot}/usr/share/clear/filemap/filemap-%{name}
 
 %files
 %defattr(-,root,root,-)
